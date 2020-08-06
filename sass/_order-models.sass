@@ -1,0 +1,89 @@
+.models
+  .series
+    &__item 
+      border: 1px solid #e2e3e7
+      &::before
+        display: none
+    &__main 
+      @media (max-width: 991px)
+        height: 70px
+    &__title 
+      @media (max-width: 991px)
+        margin-top: -10px
+  &__wrap
+    margin-top: 70px
+    @media (max-width: 1024px)
+      margin-top: 30px
+  &__subtitle 
+    margin-bottom: 26px   
+    font-size: 24px
+    font-weight: 600
+    line-height: 28px
+    text-transform: uppercase
+    color: $text-color-dark
+    @media (max-width: 1024px)
+      margin-bottom: 20px
+      font-size: 18px
+  &-block
+    display: flex
+    flex-wrap: wrap
+    border-radius: 10px
+    &__item 
+      position: relative
+      width: 49%
+      padding: 30px
+      margin-bottom: 30px
+      color: $text-color-dark
+      background: #fff url('../img/bg-models__item.jpg') no-repeat
+      background-size: cover 
+      &:not(:nth-child(2n))
+        margin-right: 2%    
+      &::before 
+        position: absolute
+        top: 10px
+        left: 30px
+        z-index: -1
+        width: calc(100% - 60px)
+        height: calc(100% - 30px)
+        display: block
+        content: ''
+        box-shadow: 0 10px 43px rgba(51, 68, 77, 0.38)
+        border-radius: 10px
+        background-color: #f8f8f8
+      @media (max-width: 991px)
+        background-image: url('../img/bg-models__item_mobile.png')
+      @media (max-width: 767px)
+        width: 100%
+        margin-bottom: 10px
+        padding: 20px 15px
+        &:not(:nth-child(2n))
+          margin-right: 0
+    &__title
+      font-size: 18px
+      font-weight: 600
+      line-height: 28px
+      text-transform: uppercase
+      color: $active-color
+      @media (max-width: 1024px)
+        font-size: 16px
+      @media (max-width: 991px)
+        text-align: center
+        color: $text-color-dark
+    .btn 
+      width: 200px
+      margin-top: 25px
+      margin-left: 0
+      @media (max-width: 767px)
+        display: none   
+  &-list 
+    margin-top: 15px
+    font-size: 15px
+    line-height: 24px
+    &__item 
+      &::before 
+        display: inline-block
+        font-weight: 700
+        color: $active-color
+        content: '-'
+    @media (max-width: 1379px)
+      font-size: 13px

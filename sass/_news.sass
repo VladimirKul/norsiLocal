@@ -1,0 +1,212 @@
+.page
+  &-news
+    padding: 60px 50px
+    @media (max-width: 1699px) 
+      padding: 30px 30px 25px 
+    @media (max-width: 1379px)
+      padding: 30px 15px 25px 
+    @media (max-width: 767px)
+      padding: 15px 
+    .section__title
+      font-size: 36px
+      font-weight: 700
+      text-align: left
+      color: $text-color-dark
+      &::after 
+        margin-left: 0
+      @media (max-width: 1699px)
+        font-size: 34px
+      @media (max-width: 1379px)
+        font-size: 30px   
+      @media (max-width: 1199px)
+        font-size: 20px
+        line-height: 28px
+    &__top 
+      position: relative
+      display: flex
+      align-items: flex-start 
+      justify-content: space-between  
+      @media (max-width: 767px)
+        display: block
+
+.news 
+  position: relative
+  height: 100%
+  display: flex
+  flex-direction: column
+  background-color: #f8f8f8 
+  &__wrap
+    width: 23.5% 
+    margin-bottom: 30px
+    @media (min-width: 992px)
+      &:hover 
+        .news__btn 
+          opacity: 1
+    &:not(:nth-child(4n))
+      margin-right: 2% 
+    @media (max-width: 1199px)
+      width: 32%
+      &:not(:nth-child(4n))
+        margin-right: 0
+      &:not(:nth-child(3n))
+        margin-right: 2% 
+    @media (max-width: 991px)
+      width: 49%
+      &:not(:nth-child(3n))
+        margin-right: 0
+      &:not(:nth-child(2n))
+        margin-right: 2% 
+    @media (max-width: 767px)
+      width: 100% 
+      margin-bottom: 15px 
+      &:not(:nth-child(2n))
+        margin-right: 0 
+  &__blocks 
+    display: flex
+    flex-wrap: wrap
+  &::before 
+    position: absolute 
+    top: 20px
+    left: 20px
+    z-index: -1
+    width: calc(100% - 40px) 
+    height: calc(100% - 20px)
+    display: block
+    box-shadow: 0 10px 43px rgba(51, 68, 77, 0.38)
+    content: ''
+  &__img 
+    position: relative
+    height: 240px
+    margin: 0 
+    overflow: hidden
+    img 
+      position: absolute
+      top: 50%
+      left: 50%
+      min-width: 100%
+      min-height: 100%
+      max-width: none
+      transform: translate(-50%, -50%)
+    @media (max-width: 1699px)
+      height: 200px 
+    @media (max-width: 1379px)
+      height: 180px
+    @media (max-width: 543px)
+      height: 162px 
+    @media (max-width: 375px)
+      img 
+        max-height: 180px
+  &__content
+    margin-bottom: 32px
+    // min-height: 150px
+    padding: 20px 20px 10px
+    font-size: 14px
+    line-height: 24px  
+    @media (max-width: 1379px)
+      padding: 15px 15px 10px
+    @media (max-width: 1199px)
+      font-size: 16px  
+  &__date 
+    margin-bottom: 14px
+    display: block
+    font-size: 14px 
+    line-height: normal
+    color: #1c75d2 
+    @media (max-width: 1379px)
+      margin-bottom: 10px
+  &__title 
+    font-size: 18px
+    font-weight: 700 
+    color: $text-color-dark 
+    @media (max-width: 1699px)
+      font-size: 16px 
+      line-height: 20px
+    @media (max-width: 1379px) 
+      font-size: 14px
+      line-height: 18px
+    // @media (max-width: 1199px) 
+  &__btn
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100% 
+    height: 32px 
+    margin-top: auto
+    display: flex 
+    align-items: center
+    justify-content: center
+    font-size: 14px
+    // line-height: 32px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase 
+    color: $text-color-light
+    opacity: 0
+    @extend %gradient2
+    @media (max-width: 1199px)
+      opacity: 1
+    // @media (min-width: 992px)
+    //   &:hover 
+    //     // line-height: 28px
+    //     color: $active-color
+    //     border: 2px solid $active-color
+    //     background-image: none 
+    //     background-color: $bg-color-light         
+  &-select
+    &__wrap 
+      display: flex
+      align-items: center
+      @media (max-width: 767px) 
+        display: block
+        margin-bottom: 20px 
+      .selectric
+        width: 270px
+        border-right: 2px solid #b2dcf7
+        border-color: #b2dcf7
+        border-radius: 4px
+        @media (max-width: 767px) 
+          width: 100%
+        .label 
+          margin-left: 10px
+          // color: #96a0ab
+        .button 
+          // width: 36px
+          height: 36px
+          background-color: #b2dcf7
+        &.active 
+          border-color: $active-color
+          .label 
+            color: $text-color-dark
+          .button
+            background-color: $active-color
+      .selectric-hover .selectric .button
+        background-color: #fff
+      .selectric-items 
+        width: 270px !important
+      .selectric-open .selectric 
+        border-color: $active-color 
+      .selectric-hide-select  
+        position: static
+        overflow: visible 
+        height: 0
+        width: 0
+        select 
+          overflow: hidden
+          opacity: 0
+    &__name 
+      margin-right: 15px
+      font-family: $FontTitle
+      font-size: 18px
+      font-weight: 500
+      line-height: 24px
+      color: $active-color 
+      @media (max-width: 1199px) 
+        font-size: 16px
+      @media (max-width: 767px)
+        margin-bottom: 6px
+
+.btn-more 
+  width: 100%
+
+// @import 'news-detail'

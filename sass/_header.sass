@@ -1,0 +1,384 @@
+.logo 
+  // margin-top: -9px
+  margin-left: -4px 
+  @media (max-width: 1699px)
+    max-width: 140px  
+  @media (max-width: 1199px)
+    margin-left: 0
+    // margin-bottom: -8px
+    // margin-top: 10px
+.header 
+  position: absolute
+  left: 0
+  right: 0
+  top: 0 
+  z-index: 10
+  width: 100%
+  padding: 40px 50px 25px
+  display: flex 
+  align-items: flex-end
+  justify-content: space-between 
+  @media (max-width: 1919px) 
+    padding: 30px 50px 25px
+  @media (max-width: 1699px) 
+    padding: 30px 30px 25px 
+  @media (max-width: 1379px)
+    padding: 30px 15px 25px 
+  @media (max-width: 1199px)  
+    align-items: center
+  @media (max-width: 767px)
+    padding: 15px 
+  &-menu 
+    display: flex 
+    // justify-content: space-between 
+    &__burger 
+      width: 21px
+      height: 14px
+      display: none
+      flex-direction: column
+      align-items: center
+      justify-content: space-between 
+      span, &::before, &::after
+        width: 100%
+        height: 2px
+        background-color: $text-color-light
+        content: '' 
+      @media (max-width: 1199px)
+        display: flex
+    &__wrap 
+      // max-width: 1480px
+      margin-bottom: 6px
+      // flex: 1 
+      @media (max-width: 1699px) 
+        margin-bottom: 3px
+      @media (max-width: 1199px)
+        display: none 
+    &__item 
+      padding: 0 20px
+      @media (max-width: 1900px)
+        padding: 0 10px
+    &__link 
+      position: relative
+      padding-bottom: 25px
+      font-size: 18px
+      font-weight: 700
+      text-transform: uppercase
+      color: $text-color-light
+      &::after 
+        position: absolute
+        left: 0
+        bottom: 17px
+        width: 0
+        height: 2px
+        @extend %gradient
+        transition: 0.3s
+        content: ''
+      &.active 
+        &::after 
+          width: 100% 
+      @media (max-width: 1900px)
+        font-size: 16px
+      @media (max-width: 1699px)
+        font-size: 14px
+      @media (max-width: 1366px)
+        font-size: 12px 
+  &-submenu 
+    &__wrap 
+      position: absolute 
+      left: 0
+      bottom: 4px
+      z-index: 10 
+      width: 100% 
+      min-height: 214px
+      display: none
+      transform: translate(0, 100%) 
+      &.active
+        display: flex
+      &::before 
+        position: absolute
+        top: 0
+        left: 0 
+        z-index: -1
+        width: 100%
+        height: 100% 
+        display: block
+        background-color: #192533
+        opacity: 0.95
+        content: ''   
+      &.submenu_tab 
+        .header-submenu__content
+          display: none
+          &.active 
+            display: flex 
+      &:not(.submenu_tab) 
+        .header-submenu__content
+          position: relative 
+          // left: 50% 
+          transform: translateX(-100%)
+        .submenu-block__wrap 
+          margin-right: 0
+    &__tabs 
+      width: 485px 
+      @media (max-width: 1699px) 
+        width: 350px
+    &__content 
+      padding: 16px 18px 
+      display: flex
+      color: $text-color-light 
+  &-search 
+    // margin-bottom: 8px
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer
+    @media (max-width: 1699px)
+      width: 20px
+
+.submenu
+  &-tab
+    height: 44px 
+    padding: 0 50px
+    display: block
+    font-size: 16px
+    line-height: 44px 
+    font-weight: 700
+    text-transform: uppercase 
+    color: $text-color-light
+    &.active
+      color: #1c2938
+      background-color: #05acff   
+    @media (max-width: 1699px) 
+      height: 38px
+      padding: 0 30px 
+      font-size: 12px
+      line-height: 38px
+  &-block 
+    margin-bottom: 30px
+    &__wrap 
+      margin-right: 74px
+      @media (max-width: 1699px) 
+        margin-right: 50px
+    &__title, .russian_servers
+      margin-left: 0
+      font-size: 18px
+      font-weight: 700
+      line-height: 30px
+      text-transform: uppercase
+      color: $text-color-light
+      border-bottom: 1px solid #049eeb
+      &:not(:first-child)
+        margin-top: 30px
+      @media (max-width: 1699px)
+        font-size: 16px 
+        line-height: 28px
+    &__item 
+      margin-left: 14px
+      display: block 
+      font-size: 18px
+      line-height: 30px
+      color: $text-color-light
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer 
+          color: $active-color 
+      @media (max-width: 1699px)
+        font-size: 16px 
+        line-height: 28px
+
+.search
+  display: flex
+  &__wrap 
+    position: absolute 
+    left: 0
+    top: 0
+    z-index: 10
+    display: none
+    width: 100%
+    padding: 30px 50px 20px
+    // transform: translate(0, 100%) 
+    @media (max-width: 1699px)
+      padding: 30px 30px 20px 
+    @media (max-width: 1300px)
+      padding: 30px 15px 20px
+    &.active 
+      display: block
+    &::before 
+      position: absolute
+      top: 0
+      left: 0 
+      z-index: -1
+      width: 100%
+      height: 100% 
+      display: block
+      background-color: #192533
+      opacity: 0.95 
+      content: ''  
+  &__close 
+    position: absolute  
+    top: 10px
+    right: 10px
+    width: 15px
+    height: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer
+    &::after, &::before 
+      position: absolute
+      width: 100%
+      height: 2px 
+      background-color: $text-color-light
+      content: '' 
+    &::after 
+      transform: rotate(45deg)
+    &::before 
+      transform: rotate(-45deg)
+  &__input 
+    width: 100%  
+    height: 40px
+    padding: 0 15px
+    font-size: 14px
+    line-height: 36px
+    border: 2px solid $active-color
+  &__clean 
+    display: flex
+    align-items: center 
+    font-family: $FontTitle
+    font-size: 14px
+    font-weight: 800
+    text-transform: uppercase
+    color: #96a0ab
+    span 
+      position: relative
+      width: 14px
+      height: 14px
+      margin-right: 10px
+      display: flex 
+      align-items: center
+      justify-content: center
+      &::before, &::after
+        position: absolute
+        width: 100% 
+        height: 2px 
+        display: block
+        background-color: #96a0ab
+        content: '' 
+      &::before 
+        transform: rotate(45deg)
+      &::after 
+        transform: rotate(-45deg)
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer
+        color: $active-color
+        span 
+          &::before, &::after 
+            background-color: $active-color
+  .btn 
+    margin: 0 
+  &__text 
+    width: 100%
+    margin-bottom: 20px
+    font-size: 24px
+    font-weight: 700
+    color: $text-color-dark 
+    text-transform: uppercase
+
+.burger
+  &-menu  
+    font-family: $FontTitle
+    &__wrap
+      position: fixed
+      top: 0
+      left: -100%
+      z-index: 15
+      width: 100%
+      height: 100vh
+      padding: 77px 15px
+      background-color: #2c4462 
+      transition: 0.3s
+      overflow-y: scroll
+      &.active
+        left: 0 
+    &__item 
+      display: flex
+      align-items: center
+      &-wrap 
+        margin-bottom: 20px
+        &.active 
+          .burger-menu__item
+            svg 
+              fill: $active-color 
+              transform: rotate(90deg) 
+          .burger-submenu
+            display: block
+      svg
+        display: block
+        height: 17px
+        width: 10px 
+        fill: $text-color-light 
+        transform: rotate(-90deg)
+    &__link  
+      margin-right: 10px 
+      font-size: 16px
+      line-height: 36px
+      font-weight: 700
+      text-transform: uppercase
+      color: $active-color 
+    &__close 
+      position: absolute  
+      top: 24px
+      left: 15px
+      width: 15px
+      height: 15px
+      display: flex
+      align-items: center
+      justify-content: center
+      &::after, &::before 
+        position: absolute
+        width: 100%
+        height: 2px 
+        background-color: $text-color-light
+        content: '' 
+      &::after 
+        transform: rotate(45deg)
+      &::before 
+        transform: rotate(-45deg)
+  &-submenu
+    display: none
+    &__item 
+      margin-bottom: 10px
+      display: block
+      line-height: 22px
+      color: $text-color-light  
+  &-sub 
+    margin: 0 -15px 10px
+    padding: 20px 0 10px
+    display: none
+    background-color: #21334a
+    &__title
+      margin-bottom: 10px
+      display: flex
+      align-items: center
+      svg
+        margin-left: 5px
+        display: block
+        min-height: 17px
+        max-height: 17px
+        min-width: 10px 
+        max-width: 22px 
+        fill: $text-color-light 
+        transform: rotate(-90deg)
+      .burger-submenu__item
+        margin-bottom: 0
+    &__wrap
+      &.active 
+        svg 
+          fill: $active-color 
+          transform: rotate(90deg) 
+        .burger-sub
+          display: block
+    .burger-submenu__item 
+      padding-left: 30px
+      line-height: 30px

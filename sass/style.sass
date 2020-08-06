@@ -1,0 +1,166 @@
+@import "variables"
+* 
+  box-sizing: border-box 
+  outline: none 
+
+body 
+  font-family: $FontMain
+  color: $text-color-dark
+
+ul 
+  margin: 0
+  padding: 0
+  list-style: none
+  
+a 
+  text-decoration: none 
+  transition: 0.3s 
+  color: $active-color 
+  // @media (min-width: 992px )
+  //   &:hover 
+  //     color: $text-color-dark
+
+svg
+  max-width: 100% 
+  max-height: 100%
+  transition: 0.3s
+
+img 
+  max-width: 100%
+
+input 
+  &[type="number"]
+    -moz-appearance: textfield
+    &:hover, &:focus 
+      -moz-appearance: number-input;
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+h1, h2, h3, h4, h5, h6 
+  margin: 0 
+  font-size: init
+  line-height: normal
+
+.btn
+  width: 170px
+  height: 40px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $FontTitle
+  font-size: 16px
+  font-weight: 700
+  text-align: center
+  color: $text-color-light
+  text-transform: uppercase
+  border: none
+  border-radius: 4px
+  @extend %gradient 
+  background-color: transparent
+  transition: 0.3s 
+  input 
+    font-family: $FontTitle
+    font-size: 16px
+    font-weight: 700
+    text-align: center
+    color: $text-color-light
+    text-transform: uppercase
+    border: 0
+    background-color: transparent
+  @media (min-width: 992px)
+    &:hover 
+      cursor: pointer
+      color: $active-color
+      border: 2px solid $active-color 
+      background-image: none 
+      input 
+        cursor: pointer
+        color: $active-color
+      .btn__icon
+        svg 
+          fill: $active-color
+  &__icon 
+    margin-left: 11px
+    width: 20px
+    height: 20px
+    img 
+      margin: 0
+      display: block
+    svg 
+      fill: $bg-color-light
+  &-o 
+    color: $active-color
+    border: 2px solid $active-color
+    background-image: none 
+    input 
+      color: $active-color
+    svg 
+      fill: $active-color
+    @media (min-width: 992px)
+      &:hover 
+        color: $text-color-light
+        border: none 
+        // line-height: 40px
+        background-image: linear-gradient(to left, #02b0e6 0%, #008ae6 100%) 
+        input
+          color: $text-color-light
+        .btn__icon
+          svg 
+            fill: $text-color-light
+    &_light 
+      color: $text-color-light
+      border-color: $text-color-light
+  &-att 
+    border-color: #e54848
+    background: #e54848
+    @media (min-width: 992px)
+      &:hover 
+        color: #e54848
+        border-color: #e54848
+        background: transparent
+  &_disabled
+    pointer-events: none
+    opacity: 0.5 
+    background-image: none
+    background-color: #acbdd0
+    &.btn-o 
+      color: #acbdd0
+      border-color: #acbdd0
+      background-color: transparent
+
+
+.hidden 
+  display: none !important
+
+.disable 
+  pointer-events: none
+
+.container
+  max-width: 1500px
+  margin: 0 auto 
+  padding: 50px 60px
+  @media (max-width: 1199px)
+    padding: 20px 15px
+
+@import "header"
+@import "main"
+@import "main-slider"
+@import "sections"
+@import "page-inner"
+@import "dropzone"  
+@import "partner-lk"
+@import "popup"
+@import "page-form"
+@import "order"
+@import "news"
+@import "detail"
+@import "solution"
+@import "catalog"
+@import "catalog-detail"
+@import "map-solution"
+@import "manufacture"
+@import "footer"  
+@import "snippets"

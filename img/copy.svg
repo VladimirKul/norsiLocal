@@ -1,0 +1,8 @@
+<svg id="copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+  <g>
+    <path d="M0 23V5h5v2H2v14h14v-3h2v5z"/>
+  </g>
+  <g>
+    <path d="M5 18V0h18v18zm2-2h14V2H7z"/>
+  </g>
+</svg>

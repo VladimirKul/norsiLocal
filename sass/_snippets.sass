@@ -1,0 +1,257 @@
+.blockquote
+  margin: 0 0 20px
+  padding: 30px 30px 30px 56px 
+  font-size: 19px
+  font-weight: 600
+  line-height: 28px
+  font-style: italic
+  color: $text-color-dark
+  border-left: 4px solid $active-color
+  background-color: #f8f8f8
+  &::before 
+    margin-left: -35px
+    margin-right: 10px
+    content: '«'
+  &::after 
+    margin-left: 10px
+    content: '»'
+  &::before, &::after 
+    position: relative
+    bottom: 3px
+    display: inline-block
+    font-size: 42px
+    font-weight: 600
+    // line-height: 10px
+    text-transform: uppercase
+    color: $active-color
+    transform: translate(0, 5px) 
+  @media (max-width: 1379px)
+    padding: 20px 20px 20px 35px
+    font-size: 18px
+    line-height: 24px
+    &::before, &::after
+      font-size: 36px
+    &::before
+      margin-left: -25px
+      margin-right: 5px 
+    &::after
+      margin-left: 5px
+  @media (max-width: 767px)
+    padding: 15px 20px 15px 30px
+    font-size: 16px
+    line-height: 20px
+    &::before, &::after
+      font-size: 24px
+    &::before
+      margin-left: -20px
+      margin-right: 5px
+    &::after
+      margin-left: 5px
+
+.help-info
+  padding: 35px 40px
+  font-size: 17px
+  font-style: italic
+  line-height: 28px
+  background-color: #f8f8f8
+  @media (max-width: 1379px)
+    padding: 20px
+    font-size: 16px
+    line-height: 24px
+  @media (max-width: 767px)
+    padding: 15px
+    font-size: 14px  
+    line-height: 20px
+  h2 
+    margin: 0 0 10px
+    font-size: 17px
+    font-style: normal
+    font-weight: 600
+    line-height: 28px 
+    @media (max-width: 1379px)
+      font-size: 16px
+      line-height: 24px
+    @media (max-width: 767px)
+      font-size: 14px
+      line-height: 20px
+
+.origin 
+  font-size: 17px
+  font-style: italic
+  color: #6e7c8b
+  a 
+    color: $active-color
+    @media (min-width: 992px)
+      &:hover 
+        color: $text-color-dark
+  @media (max-width: 1379px)
+    font-size: 16px
+  @media (max-width: 767px)
+    font-size: 14px 
+
+.att-info
+  margin: 0 0 20px
+  padding: 25px 30px
+  font-size: 22px
+  line-height: 34px
+  border-left: 4px solid #ca8654
+  color: $text-color-dark
+  background-color: #f8f8f8
+  @media (max-width: 1379px)
+    padding: 20px 20px 20px 35px
+    font-size: 18px
+    line-height: 24px
+  @media (max-width: 767px)
+    padding: 20px 15px 15px
+    font-size: 16px
+    line-height: 20px
+
+.file 
+  &-download 
+    // width: 100%
+    padding: 8px 10px
+    flex-wrap: nowrap
+    font-weight: 600
+    color: $text-color-dark
+    border: none !important
+    border-radius: 4px
+    background-color: #f1f8fd
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer
+    .file 
+      &__name
+        width: auto
+        margin-right: 2px
+        // white-space: nowrap
+        &-wrap 
+          display: flex
+          flex-wrap: wrap
+      &__size
+        width: auto
+        white-space: nowrap
+        margin-right: 15px
+      &__arr
+        width: 20px
+        height: 20px
+      @media (max-width: 767px)
+        width: 100%
+        &__icon
+          margin-right: 10px
+        &__wrap 
+          display: block
+    &__wrap
+      display: flex 
+    &_light 
+      padding: 0  
+      background-color: transparent 
+      color: $text-color-light
+      .file__arr
+        fill: $text-color-light 
+    &_dark 
+      padding: 0
+      background-color: transparent 
+      color: $text-color-dark
+      .file__arr
+        fill: $text-color-dark
+
+.contact
+  &__item
+    margin-bottom: 10px
+    // display: flex
+  &__name
+    margin-right: 5px
+    margin-bottom: 5px
+    display: inline-block
+  &__info
+    margin-bottom: 5px
+    display: inline-block
+    font-weight: 600 
+  &-block 
+    width: 23.5% 
+    min-height: 160px
+    margin-bottom: 20px
+    padding: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    border-radius: 10px
+    background-color: #f8f8f8 
+    &:not(:nth-child(4n))
+      margin-right: 2%
+    @media (max-width: 1199px)
+      width: 32%
+      &:not(:nth-child(4n))
+        margin-right: 0
+      &:not(:nth-child(3n))
+        margin-right: 2%
+    @media (max-width: 991px)
+      width: 49%
+      &:not(:nth-child(3n))
+        margin-right: 0
+      &:not(:nth-child(2n))
+        margin-right: 2%
+    @media (max-width: 767px)
+      width: 100%
+      &:not(:nth-child(2n))
+        margin-right: 0
+    &s
+      display: flex 
+      flex-wrap: wrap
+    &__title
+      margin-bottom: 15px 
+      font-size: 16px
+      line-height: 20px
+      font-weight: 700
+      text-transform: uppercase 
+      color: $text-color-dark
+    &__item 
+      margin-bottom: 10px
+    &__name 
+      display: inline-block
+    &__info 
+      display: inline-block
+  a 
+    @media (min-width: 992px)
+      &:hover
+        text-decoration: underline 
+
+.block
+  &-info
+    display: flex 
+    flex-wrap: wrap
+    &__item
+      width: 32%
+      margin-bottom: 20px
+      padding: 20px
+      border-left: 4px solid $active-color
+      background-color: #f8f8f8
+      @media (max-width: 1199px)
+        padding: 15px
+      &:not(:nth-child(3n))
+        margin-right: 2%
+      @media (max-width: 991px)
+        width: 49%
+        &:not(:nth-child(3n))
+          margin-right: 0
+        &:not(:nth-child(2n))
+          margin-right: 2%
+      @media (max-width: 767px)
+        width: 100%
+        &:not(:nth-child(2n))
+          margin-right: 0 
+    &__title 
+      margin-bottom: 15px
+      font-size: 16px
+      line-height: 20px
+      font-weight: 700
+      // text-transform: uppercase
+      color: $active-color
+    &__num 
+      display: inline-block
+      font-size: 30px
+      font-weight: 700
+      color: $active-color
+    &__text 
+      ul 
+        margin-bottom: 15px 

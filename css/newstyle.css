@@ -1,0 +1,185 @@
+/*----- Изменение 05.07.2020 Randel -----*/
+
+.section__img__blocks {
+  width: 100%;
+}
+
+.section__img__blocks {
+  margin-bottom: 40px;
+}
+
+.section__img__blocks {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.section__img__block {
+  width: 30%;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #ececec52;
+}
+
+.section__img__block h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section__img__block a {
+  color: #233449;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section__img__block a:hover {
+  color: #00a9fc;
+}
+
+.section__img__block_pic {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__img__block_pic img {
+  border-radius: 10px;
+  max-height: 100%;
+  /* box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.5); */
+}
+
+.section__img__block_btn {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  justify-content: space-around;
+}
+
+.section__text__blocks {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.section__text__block {
+  width: 30%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ececec52;
+}
+
+.section__text__block span {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section__text__block p {
+  color: #233449;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.detail__block__imgs {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.detail__block__img {
+  position: relative;
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #cacaca; */
+  background-color: #f8f8f8;
+  margin: 0 15px 30px;
+  height: 200px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.detail__block__img img {
+  padding: 10px;
+  max-height: 100%;
+}
+
+.contakty__my a {
+  color: #233449;
+}
+
+.contakty__my a:hover {
+  color: #00a9fc;
+}
+
+.btn_my {
+  font-size: 12px;
+  width: 100px;
+}
+
+@media screen and (max-width: 1379px) {
+  .section__img__block_pic {
+    height: 180px;
+  }
+
+  .detail__block__img {
+    margin: 0 5px 30px;
+    height: 180px;
+  }
+}
+
+/* @media screen and (max-width: 991px) {
+  .section__img__block_pic{
+    height: 130px;
+  }
+  .section__img__block {
+    width: 32%;
+  }
+  .section__img__block h3 {
+    font-size: 18px;
+  }
+} */
+
+@media screen and (max-width: 991px) {
+  .section__img__block_pic {
+    height: 200px;
+  }
+
+  .section__img__block {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+
+  .detail__block__img {
+    width: 45%;
+    /* height: 125px; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section__img__block {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .detail__block__img {
+    width: 100%;
+    /* height: 125px; */
+  }
+
+  .section__img__block_pic {
+    height: 190px;
+  }
+}
+
+
+/*----- Изменение 05.07.2020 Randel -----*/
